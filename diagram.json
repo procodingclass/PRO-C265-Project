@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Kaesha Talreja",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -74, "left": 59.33, "attrs": {} },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": -44.73, "left": -100.13, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -101.35,
+      "left": 417.66,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "rtc1:GND", "uno:GND.2", "black", [ "h-21.5", "v205.4", "h305.33" ] ],
+    [ "rtc1:SDA", "uno:A4", "gray", [ "h-16.83", "v203.9", "h52.67" ] ],
+    [ "rtc1:SCL", "uno:A5", "orange", [ "h-11.5", "v211.07", "h108.67" ] ],
+    [ "rtc1:5V", "uno:5V", "red", [ "h-38.16", "v255.4", "h346" ] ],
+    [ "uno:10", "bz1:2", "red", [ "v-43.7", "h171.28", "v193.83", "h76.33" ] ],
+    [ "bz1:1", "uno:GND.1", "black", [ "v68.46", "h-54.12", "v-144.94", "h-119.21" ] ]
+  ]
+}
