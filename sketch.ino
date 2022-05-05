@@ -32,8 +32,6 @@ void loop() {
 
   //  RTC date and time
   DateTime dt = rtc.now();
-  hours = dt.hour();
-  minutes = dt.minute();
   if (hours == dt.hour() && minutes == dt.minute()) {
     //play the buzzer
     // Serial.println("Snooze...");
